@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../dist/css/main.css" />
+    <title>Formochka</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <form name="form" id="form" class="form">
+        <div class="text-input">
+          <label class="text-input__label" for="name">Name:</label>
+          <input
+            class="text-input__input"
+            type="text"
+            name="name"
+            id="name"
+            placeholder="Name"
+            value="Ibvan Ibvanov"
+            required
+          />
+        </div>
+        <div class="flex">
+          <div class="text-input text-input--half">
+            <label class="text-input__label" for="slackId">SlackId: </label>
+            <input
+              class="text-input__input"
+              type="text"
+              name="slack-id"
+              id="slack-id"
+              placeholder="Slack Id"
+              value="1235515"
+              required
+            />
+          </div>
+          <div class="text-input text-input--half">
+            <label class="text-input__label" for="task-limit"
+              >Task Limit:
+            </label>
+            <input
+              class="text-input__input"
+              type="number"
+              name="task-limit"
+              id="task-limitimit"
+              placeholder="Task limit"
+              value="30"
+              min="0"
+              step="1"
+              required
+            />
+          </div>
+        </div>
+        <div class="text-input">
+          <label class="text-input__label" for="language"
+            >Select language:
+          </label>
+          <select
+            class="text-input__input"
+            name="language"
+            id="language"
+            required
+          >
+            <option value="ru">Russian</option>
+            <option value="en">English</option>
+          </select>
+        </div>
+        <div class="text-input">
+          <label class="text-input__label" for="specialization"
+            >Select specialization:
+          </label>
+          <select
+            class="text-input__input"
+            name="specialization"
+            id="specialization"
+            required
+            disabled
+          >
+            <option value="html" default>Html</option>
+            <option value="js">JavaScript</option>
+            <option value="node">NodeJS</option>
+            <option value="react">React</option>
+          </select>
+        </div>
+        <fieldset class="checkbox-group"></fieldset>
+        <div class="px-3">
+          <button
+            class="w-28 min-w-max h-12 bg-blue-500 border-transparent border-4 text-white hover:bg-blue-600 py-1 px-3 rounded"
+            type="submit"
+          >
+            Send
+          </button>
+          <div class="checkbox">
+            <label for="tester" class="checkbox__label">Test Subject</label>
+            <input type="checkbox" name="" id="tester" class="checkbox__input" />
+          </div>
+        </div>
+      </form>
+    </div>
+    <script src="./assets/js/main.js"></script>
+  </body>
+</html>

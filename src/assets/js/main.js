@@ -40,6 +40,7 @@ function handleCheckboxes(e) {
   });
 }
 
+const form = document.querySelector('#form');
 const languageSelect = document.querySelector('#language');
 const specializationSelect = document.querySelector('#specialization');
 const checkboxGroup = document.querySelector('.checkbox-group');
@@ -49,5 +50,16 @@ document.onload = () =>
     checkboxGroup.append(createCheckbox(feature))
   );
 
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
+  const fd = new FormData(form);
+  console.log([...fd])
+
+  // for (const i of fd) {
+  //   console.log(i);
+  // }
+  console.log(data)
+  form.reset();
+});
 languageSelect.addEventListener('change', handleLanguage);
 specializationSelect.addEventListener('change', handleCheckboxes);

@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.wrapper {
+  @apply flex items-center justify-center h-screen;
+}
+
+.form {
+  @apply p-6 bg-gray-50 shadow-md rounded;
+}
+
+.text-input {
+  @apply w-full px-3 mb-6;
+}
+
+.text-input--half {
+  @apply md:w-1/2;
+}
+
+.text-input__label {
+  @apply block text-gray-700 text-base font-bold mb-2;
+}
+
+.text-input__input {
+  @apply appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 focus:outline-none focus:bg-white focus:border-gray-500;
+}
+
+.checkbox {
+  
+}
+
+.checkbox__input {
+  @apply rounded h-5 w-5 text-blue-500 ring-0 focus:ring-0;
+}
